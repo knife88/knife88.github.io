@@ -1,13 +1,24 @@
 baseURL: https://example.org/
-languageCode: en-us
+languageCode: zh
 title: Jiam Blog
 theme: ["PaperMod"]
-
 
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+
+
+defaultContentLanguage: zh
+
+languages:
+  zh:
+    languageName: "中文"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
 
 minify:
   disableXML: true
@@ -51,9 +62,10 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
+    text: "主页"
+    iconSVG: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="#ff4949"><path d="M6 2C6 2 6.75 2 7.5 2H11v0h-5z"><animate fill="freeze" attributeName="d" dur="0.4s" values="M6 2C6 2 6.75 2 7.5 2H11v0h-5z;M6 3.5C6 2.75 6.75 2 7.5 2H11v20h-5z"/></path><path d="M13.5 2h0v8.5c0 0.75 0 1.5 0 1.5h0z"><animate fill="freeze" attributeName="d" begin="0.5s" dur="0.2s" values="M13.5 2h0v8.5c0 0.75 0 1.5 0 1.5h0z;M13.5 2h5v8.5c0 0.75 -0.75 1.5 -1.5 1.5h-3.5z"/></path><path d="M13.5 17h0v0c0 0 0 0 0 0h0z"><animate fill="freeze" attributeName="d" begin="0.8s" dur="0.2s" values="M13.5 17h0v0c0 0 0 0 0 0h0z;M13.5 17h5v3.5c0 0.75 -0.75 1.5 -1.5 1.5h-3.5z"/></path></g></svg>
+    # icon: "<link / abs url>"
+    # iconHeight: 48
 
   # profile-mode
   profileMode:
@@ -72,8 +84,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "安居一隅 \U0001F44B"
+    Content: /** 写写BUG，记录日常 */
 
   socialIcons:
     - name: x
@@ -115,15 +127,15 @@ params:
 menu:
   main:
     - identifier: categories
-      name: categories
+      name: 分类
       url: /categories/
       weight: 10
     - identifier: tags
-      name: tags
+      name: 标签
       url: /tags/
       weight: 20
-    - identifier: example
-      name: example.org
+    - identifier: share
+      name: 分享
       url: https://example.org
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
